@@ -1,0 +1,98 @@
+<div class="row">
+  <div class="col">
+    <p class="h3 fw-bold text-danger">Add Contact</p>
+    <p class="fst-italic">
+      Lorem ipsum nekjfnbdsaijofn fbnsdaiujofbnsdijufnb fuibndsifusndb
+    </p>
+  </div>
+</div>
+
+<!-- Contact form -->
+<div class="row">
+  <div class="col-sm-3">
+    <form (submit)="submitUpdate()">
+      <div class="mb-2">
+        name
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="contact.name"
+          [value]="contact.name"
+          name="name "
+          placeholder="Name"
+          required="true"
+        />
+      </div>
+      <div class="mb-2">
+        photo
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Photo URL"
+          [(ngModel)]="contact.photo"
+          [value]="contact.photo"
+          name="photo "
+          required="true"
+        />
+      </div>
+      <div class="mb-2">
+        email
+        <input
+          type="email"
+          class="form-control"
+          placeholder="Email"
+          [(ngModel)]="contact.email"
+          [value]="contact.email"
+          name="email "
+          required="true"
+        />
+      </div>
+      <div class="mb-2">
+        mobile
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Mobile"
+          [(ngModel)]="contact.mobile"
+          [value]="contact.mobile"
+          name="mobile "
+          required="true"
+        />
+      </div>
+      <div class="mb-2">
+        title
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Title"
+          [(ngModel)]="contact.title"
+          [value]="contact.title"
+          name="title"
+          required="true"
+        />
+      </div>
+      <div class="mb-2">
+        groupId
+        <select class="form-control" [(ngModel)]="contact.groupId"
+        [value]="contact.groupId"
+        name="title "
+        required="true">
+          <option value="" disabled>Select a Group</option>
+          <option value="" *ngFor="let group of groups" value="group.id">{{group.name}}</option>
+        </select>
+      </div>
+      <div class="mb-2">
+        <input type="submit" class="btn btn-danger" value="Update" />
+        <a routerLink="/" class="btn btn-dark ms-2">Close</a>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-sm-4">
+    <img
+      [src]="contact.photo"
+      class="contact-image"
+      alt=""
+    />
+  </div>
+</div>
