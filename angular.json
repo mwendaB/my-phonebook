@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-contact-manager": {
+    "phone-book": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-contact-manager",
+            "outputPath": "dist/phone-book",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -76,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-contact-manager:build:production"
+              "browserTarget": "phone-book:build:production"
             },
             "development": {
-              "browserTarget": "angular-contact-manager:build:development"
+              "browserTarget": "phone-book:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-contact-manager:build"
+            "browserTarget": "phone-book:build"
           }
         },
         "test": {
@@ -111,5 +111,5 @@
       }
     }
   },
-  "defaultProject": "angular-contact-manager"
+  "defaultProject": "phone-book"
 }
