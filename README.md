@@ -2,9 +2,27 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
 
+## Cloning the repo
+Open your terminal then type 
+```
+git clone https://github.com/mwendaB/my-phonebook.git
+```
+
 ## Development server
+After cloning the repo,
+first run 
+```
+npm install
+```
+This will install all the node_modules needed by the project to run smoothly 
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Contact server
+Then cd into the server which stores all the contacts. Then run `npm install`.
+After all the node modules have installed run `npm start` to start up tour database.
+The database will be at `http://localhost:9000`. Type s + enter at any time to create a snapshot of the database
+
 
 ## Code scaffolding
 
